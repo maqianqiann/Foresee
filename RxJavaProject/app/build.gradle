@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.mvvm.text"
+        applicationId "com.rxjava.text"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
@@ -25,8 +25,18 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.google.dagger:dagger:2.4'
-    apt 'com.google.dagger:dagger-compiler:2.4'
-    compile 'org.glassfish:javax.annotation:10.0-b28'// 添加java 注解库
+    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    //RxAndroid的依赖包
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+
+
+   /* compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'*/
     testCompile 'junit:junit:4.12'
 }
