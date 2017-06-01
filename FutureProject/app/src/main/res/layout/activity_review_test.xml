@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_review_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:orientation="vertical"
+   >
+
+    <com.sharker.view.Toptitlebar
+        android:id="@+id/courseExamTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        app:leftimage="@drawable/left"
+        app:middleText="课后测试">
+    </com.sharker.view.Toptitlebar>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/zyCourseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:text="连锁门店课程大纲"
+            android:textColor="#323232"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/zyCourseState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="30px"
+            android:lineSpacingExtra="20px"
+            android:text="\n\u3000\u3000大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好大家好"
+            android:textColor="#bfbfbf"
+            android:textSize="14.7px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:background="#EFEFEF"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/review_test_recy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20px"
+            android:background="#ffffff">
+        </android.support.v7.widget.RecyclerView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="2px"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:layout_height="65.3dp">
+            <TextView
+                android:id="@+id/review_TvCommit"
+                android:layout_width="173.3dp"
+                android:layout_height="33.3dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/test_submit_answer" />
+        </RelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

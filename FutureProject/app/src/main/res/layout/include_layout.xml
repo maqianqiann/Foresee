@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/left"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/im_back_include"
+            />
+        <TextView
+
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="免费试听"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:id="@+id/text_title_include"
+
+            />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按时间"
+            android:textSize="18dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@drawable/color_selector"
+            android:id="@+id/text_time_include"
+            />
+    </LinearLayout>
+
+</LinearLayout>

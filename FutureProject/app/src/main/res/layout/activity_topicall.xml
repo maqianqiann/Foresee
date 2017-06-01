@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+<com.sharker.view.Toptitlebar
+android:id="@+id/topic_all_titlebar"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+app:leftimage="@drawable/commonleftarrow"
+app:middleText="查看全部"
+    ></com.sharker.view.Toptitlebar>
+<android.support.v7.widget.RecyclerView
+android:id="@+id/topic_all_recycler"
+android:layout_width="match_parent"
+android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+
+    </com.zhy.autolayout.AutoLinearLayout>

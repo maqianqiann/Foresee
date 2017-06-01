@@ -81,13 +81,13 @@ public  class ECChatActivity extends AppCompatActivity implements EMMessageListe
                         @Override
                         public void onSuccess() {
                             // 消息发送成功，打印下日志，正常操作应该去刷新ui
-                            Log.i("lzan13", "send message on success");
+                            Log.i("xxx", "send message on success");
                         }
 
                         @Override
                         public void onError(int i, String s) {
                             // 消息发送失败，打印下失败的信息，正常操作应该去刷新ui
-                            Log.i("lzan13", "send message on error " + i + " - " + s);
+                            Log.i("xxx", "send message on error " + i + " - " + s);
                         }
 
                         @Override
@@ -200,7 +200,7 @@ public  class ECChatActivity extends AppCompatActivity implements EMMessageListe
             // 透传消息
             EMMessage cmdMessage = list.get(i);
             EMCmdMessageBody body = (EMCmdMessageBody) cmdMessage.getBody();
-            Log.i("lzan13", body.action());
+            Log.i("xxxx", body.action());
         }
     }
 

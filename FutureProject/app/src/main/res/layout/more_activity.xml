@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/course_course_frequency"
+        android:id="@+id/linear_more"
+        android:orientation="vertical"
+        ></LinearLayout>
+
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    >
+    <!--<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/left"
+        android:layout_marginLeft="26.7dp"
+        />-->
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连锁店开业大纲"
+        android:layout_marginLeft="2dp"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="免费观看180s,观看完整版请"
+            android:layout_marginLeft="2dp"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buy_button"
+            android:text="立即购买"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/jc_more"
+        android:layout_marginTop="30dp"
+        ></fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard>
+
+    <RelativeLayout
+        android:id="@+id/relate_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/linear_more"
+        >
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:id="@+id/im_more"
+            android:src="@drawable/course_teachers"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginLeft="5dp"
+            />
+        <ImageView
+
+            android:id="@+id/im_person"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="75dp"
+            android:src="@drawable/home_wenben"
+            android:layout_width="40px"
+            android:layout_height="40px" />
+          <TextView
+              android:layout_alignLeft="@+id/im_more"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="于春华老师"
+              android:layout_marginLeft="210px"
+              android:id="@+id/name_more"
+              android:layout_marginTop="20dp"
+              android:textSize="16.3sp"
+              android:textColor="#232323"
+              />
+        <TextView
+            android:layout_alignLeft="@+id/im_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="于春华老师"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="210px"
+            android:layout_below="@id/name_more"
+            android:id="@+id/course_more"
+            android:layout_marginTop="50dp"
+            android:textColor="#898989"
+            android:textSize="13.3sp"
+
+
+            />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="320dp"
+            android:background="@drawable/return_course_btn"
+            android:layout_marginTop="50dp"
+            android:text="听老师介绍"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+
+
+            />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relate_more"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连锁门店课程大纲"
+            android:textSize="16sp"
+            android:textColor="#232323"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="知名美业顾问教你连锁开店"
+            android:textSize="14sp"
+            android:layout_marginTop="3dp"
+            />
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="课程简介"
+            android:textSize="16sp"
+            android:textColor="#232323"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="知名美业顾问教你连锁开店"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/textView"
+            android:gravity="center"
+            android:layout_weight="1"
+            />
+
+        <LinearLayout
+    android:layout_marginBottom="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+
+    <LinearLayout
+
+        android:layout_marginTop="40dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/course_custom"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/course_download"
+            android:layout_weight="1"
+
+
+            />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/course_collection"
+
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="@drawable/course_post_test"
+
+        android:layout_marginTop="40dp"
+
+        />
+
+</LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

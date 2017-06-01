@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:id="@+id/course_titleimage"
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/homepage_content_picture_01" />
+
+    <ImageView
+        android:id="@+id/course_lconimage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/courseitem_name"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/courseitem_time"
+        android:src="@drawable/cours_content_frequency2x" />
+
+
+    <TextView
+        android:id="@+id/courseitem_classname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/course_title_item"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/course_titleimage"
+        android:text="知名美业顾问免费教你连锁店开店..."
+        android:textColor="#808080"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/courseitem_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/courseitem_classname"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/course_titleimage"
+        android:text="于春华老师"
+        android:textColor="#636363"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/courseitem_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/courseitem_name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/course_titleimage"
+        android:text="1小时30分"
+        android:textColor="#CCCBCA"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/courseitem_textcourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/courseitem_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/courseitem_time"
+        android:text="已上课"
+        android:textColor="#F4C910"
+        android:textSize="16dp" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/courseitem_orangetext"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/courseitem_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/courseitem_textcourse"
+        android:background="@drawable/coursetext_orange"
+        android:gravity="center"
+        android:text="待测试"
+        android:textColor="#ffffff"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/course_title_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连锁门店课程大纲"
+        android:textColor="#323232"
+        android:textSize="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/courseitem_classname"
+        android:layout_alignStart="@+id/courseitem_classname" />
+
+
+</RelativeLayout>

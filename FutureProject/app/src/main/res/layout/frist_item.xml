@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<ImageView
+    android:id="@+id/image_first"
+    android:layout_width="140dp"
+    android:layout_height="140dp"
+    android:layout_marginLeft="20dp"
+    android:src="@mipmap/ic_launcher"
+    />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/title_first"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:text="店铺如何运维"
+            android:textColor="#2f2f2f"
+            />
+        <TextView
+            android:id="@+id/desc_first"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="教你店铺运营的方法"
+            android:textColor="#989898"
+            />
+
+        <TextView
+            android:id="@+id/ks_first"
+            android:layout_width="wrap_content"
+            android:layout_height="13.3dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="26.7dp"
+            android:text="四课堂/视频"
+            android:layout_marginBottom="20dp"
+            android:textColor="#bfbfbf"
+            />
+    </LinearLayout>
+
+</LinearLayout>

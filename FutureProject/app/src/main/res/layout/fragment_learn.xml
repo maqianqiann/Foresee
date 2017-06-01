@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <com.youth.banner.Banner
+            android:id="@+id/mBanner"
+            android:layout_width="match_parent"
+            android:layout_height="320px"></com.youth.banner.Banner>
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:layout_height="80px">
+            <ImageView
+                android:id="@+id/imageview_sanjiao"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/delta"
+                android:layout_width="26px"
+                android:layout_height="28px" />
+            <TextView
+                android:textSize="36px"
+                android:textColor="#121212"
+                android:text="免费试听"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/imageview_sanjiao"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/imageview_jian"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30px"
+                android:src="@mipmap/right"
+                android:layout_width="24px"
+                android:layout_height="24px" />
+            <TextView
+                android:id="@+id/try_all"
+                android:layout_toLeftOf="@+id/imageview_jian"
+                android:textSize="24px"
+                android:text="查看全部"
+                android:textColor="#989898"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#EFEFEF"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/try_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"></android.support.v7.widget.RecyclerView>
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:background="#fff"
+                android:layout_marginTop="30px"
+                android:layout_width="match_parent"
+                android:layout_height="80px">
+                <ImageView
+                    android:id="@+id/imageview_sanjiao2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/delta"
+                    android:layout_width="26px"
+                    android:layout_height="28px" />
+                <TextView
+                    android:textSize="36px"
+                    android:textColor="#121212"
+                    android:text="精选课程"
+                    android:layout_marginLeft="10px"
+                    android:layout_toRightOf="@+id/imageview_sanjiao2"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/imageview_jian2"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30px"
+                    android:src="@mipmap/right"
+                    android:layout_width="24px"
+                    android:layout_height="24px" />
+                <TextView
+                    android:id="@+id/text_top2"
+                    android:layout_toLeftOf="@id/imageview_jian2"
+                    android:textSize="24px"
+                    android:text="查看全部"
+                    android:textColor="#989898"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#EFEFEF"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:background="#fff"
+                android:id="@+id/course_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:background="#fff"
+            android:layout_marginTop="30px"
+            android:layout_width="match_parent"
+            android:layout_height="80px">
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/delta"
+                android:layout_width="26px"
+                android:layout_height="28px" />
+            <TextView
+                android:textSize="36px"
+                android:textColor="#121212"
+                android:text="精选专辑"
+                android:layout_marginLeft="10px"
+                android:layout_toRightOf="@+id/iv"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30px"
+                android:src="@mipmap/right"
+                android:layout_width="24px"
+                android:layout_height="24px" />
+            <TextView
+                android:id="@+id/topic_all"
+                android:layout_toLeftOf="@+id/iv2"
+                android:textSize="24px"
+                android:text="查看全部"
+                android:textColor="#989898"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </com.zhy.autolayout.AutoRelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#EFEFEF"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:background="#fff"
+            android:id="@+id/topic_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

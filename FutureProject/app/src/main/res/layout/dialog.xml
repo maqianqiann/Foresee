@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="166.7dp"
+    android:layout_height="106.7dp"
+    android:background="#fff"
+    android:layout_marginLeft="13.3dp"
+    >
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="按上架时间"
+      android:textSize="16dp"
+      android:layout_marginTop="10dp"
+      android:textColor="@drawable/color_selector"
+      android:id="@+id/text_dia_time"
+      />
+    <TextView
+        android:layout_marginTop="43.2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按七日销量"
+        android:textSize="16dp"
+        android:layout_marginBottom="13.3dp"
+        android:textColor="@drawable/color_selector"
+        android:id="@+id/text_dia_seven"
+
+        />
+
+</LinearLayout>
