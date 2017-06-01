@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.future.mqq.R;
 import com.future.mqq.fragment.ViewFragment;
+import com.future.mqq.fragment.ZhuanFragment;
 
 import java.util.ArrayList;
 
@@ -46,6 +47,8 @@ public class ListTryActivity extends AppCompatActivity {
     private MyAdapter adapter;
     private ArrayList<Fragment> listf=new ArrayList<>();
     private ArrayList<String>  listt=new ArrayList<>();
+    private int id;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +56,7 @@ public class ListTryActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         textTimeInclude.setVisibility(View.VISIBLE);
         Intent intent = getIntent();
-        int id = intent.getIntExtra("id", 0);
+        id = intent.getIntExtra("position", 0);
         switch (id){
             case 0:
                 textTimeInclude.setText("");
@@ -61,18 +64,29 @@ public class ListTryActivity extends AppCompatActivity {
             case 1:
                 textTitleInclude.setText("精品列表");
                 break;
+            case 2:
+                textTitleInclude.setText("精选专辑");
+
+                break;
         }
         //设置数据
         initDatas();
+        imBackInclude.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 
     private void initDatas() {
-        for (int i = 0; i <3 ; i++) {
+        for (int i = 0; i <2 ; i++) {
             ViewFragment fragment = new ViewFragment();
             listf.add(fragment);
 
         }
+        listf.add(new ZhuanFragment());
         listt.add("免费");
         listt.add("精品");
         listt.add("专辑");
@@ -80,16 +94,17 @@ public class ListTryActivity extends AppCompatActivity {
 
         adapter = new MyAdapter(getSupportFragmentManager());
         //设置tab的类型
-        tabListtry.setTabMode(TabLayout.MODE_SCROLLABLE);
+        tabListtry.setTabMode(TabLayout.MODE_FIXED);
         //设置字体的颜色
         tabListtry.setTabTextColors(Color.WHITE,Color.BLACK);
         tabListtry.setSelectedTabIndicatorColor(Color.BLACK);
         tabListtry.setupWithViewPager(viewPageListtry);
         tabListtry.setTabsFromPagerAdapter(adapter);
 
+
         //viewPager设置数据
         viewPageListtry.setAdapter(adapter);
-
+           viewPageListtry.setCurrentItem(id);
     }
     private class MyAdapter extends FragmentPagerAdapter{
 

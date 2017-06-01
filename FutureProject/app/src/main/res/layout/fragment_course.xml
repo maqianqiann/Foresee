@@ -19,7 +19,7 @@
             android:layout_centerVertical="true"
             android:text="我的课程"
             android:textColor="#121212"
-            android:textSize="36px" />
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView

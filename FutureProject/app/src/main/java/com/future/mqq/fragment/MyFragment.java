@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.future.mqq.R;
+import com.future.mqq.activity.LogActivity;
 import com.future.mqq.activity.MainActivity;
 
 /**
@@ -25,15 +26,14 @@ public class MyFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_people,null);
+        view = inflater.inflate(R.layout.fragment_me,null);
         //进行判断的登陆的状态
         activity = (MainActivity) getActivity();
-       /* if(!LogActivity.log){
+        if(!LogActivity.log){
             //如果登陆的状态是false
             //跳转到登陆的界面
-            Intent in=new Intent(activity,LogActivity.class);
-            startActivity(in);
-        }*/
+            //显示别的节目
+        }
 
         return view;
     }

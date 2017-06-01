@@ -71,7 +71,7 @@ public class MoreActivity extends AppCompatActivity implements CourseView{
                 //进行登陆的判断
                 if(!LogActivity.log){
                     //进行注册
-                    Intent in=new Intent(MoreActivity.this,RegistActivity.class);
+                    Intent in=new Intent(MoreActivity.this,LogActivity.class);
                     startActivity(in);
                     return;
                 }else {

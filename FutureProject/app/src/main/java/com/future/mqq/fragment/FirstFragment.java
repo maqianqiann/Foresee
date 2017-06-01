@@ -83,50 +83,65 @@ public class FirstFragment extends Fragment implements BannerView{
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        //精选
         view.findViewById(R.id.text_top2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                    Intent in=new Intent(activity,ListTryActivity.class);
                    in.putExtra("id",1);
+                in.putExtra("position",1);
                 startActivity(in);
             }
         });
+        //免费
         imageviewJian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in=new Intent(activity,ListTryActivity.class);
+                in.putExtra("position",0);
+
                 startActivity(in);
             }
         });
+        //精选
         imageviewJian2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in=new Intent(activity,ListTryActivity.class);
+                in.putExtra("position",1);
+
                 startActivity(in);
             }
         });
+        //免费
         tryAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in=new Intent(activity,ListTryActivity.class);
                 in.putExtra("id",0);
+                in.putExtra("position",0);
 
                 startActivity(in);
             }
         });
+        //专辑
         topicAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in=new Intent(activity,ListTryActivity.class);
                 in.putExtra("id",1);
+                in.putExtra("position",2);
 
                 startActivity(in);
             }
         });
+        //专辑
         iv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in=new Intent(activity,ListTryActivity.class);
+                in.putExtra("position",2);
+
                 startActivity(in);
             }
         });
