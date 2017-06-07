@@ -22,6 +22,7 @@ import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 
 /**
  * Created by lenovo on 2017/5/26.
+ * 这是课程详情的界面，有视频的播放，点击时进行购买
  */
 public class MoreActivity extends AppCompatActivity implements CourseView{
 
@@ -35,6 +36,7 @@ public class MoreActivity extends AppCompatActivity implements CourseView{
     private TextView textView;
     private String object_id;
     private CoursePresent present;
+    private String order="";
 
 
     @Override
@@ -67,7 +69,6 @@ public class MoreActivity extends AppCompatActivity implements CourseView{
             public void onClick(View v) {
                 //跳转到立即购买的界面，就是提交订单
                 //这里调用
-
                 //进行登陆的判断
                 if(!LogActivity.log){
                     //进行注册
@@ -75,13 +76,15 @@ public class MoreActivity extends AppCompatActivity implements CourseView{
                     startActivity(in);
                     return;
                 }else {
+                    present.getOrderDatas();//获取支付订单的信息
                     Intent in=new Intent(MoreActivity.this,PayActivity.class);
+                    //这是课程的id
                     in.putExtra("object_id",object_id);
+                    //这是订单号
+                    in.putExtra("order",order);
+                    Log.i("Intent_order",order);
                     startActivity(in);
                 }
-
-
-                present.getOrderDatas();
 
             }
         });
@@ -90,7 +93,7 @@ public class MoreActivity extends AppCompatActivity implements CourseView{
 
     @Override
     public void showCourse(MyCourseBean bean) {
-        //拿到数据
+        //拿到数据,展示视频
         String video = bean.getData().getCourse_video();
         Log.i("xxxv",video);
        // jc_more.videoController.setUp("视频/MP3地址","视频/MP3标题");
@@ -111,8 +114,10 @@ public class MoreActivity extends AppCompatActivity implements CourseView{
     public void showOrder(OrderBean orderBean) {
         //拿到预支付订单的信息
         if(orderBean!=null){
-            orderBean.getData().getOrder_sn();
+            String order_sn = orderBean.getData().getOrder_sn();
             Log.i("order", orderBean.getData().getOrder_sn());
+            //将预支付订单信息传入到支付的界面
+            order=order_sn;//赋值
 
         }
 

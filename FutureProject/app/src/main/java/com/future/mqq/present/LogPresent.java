@@ -11,6 +11,7 @@ import com.future.mqq.view.LogView;
 
 /**
  * Created by lenovo on 2017/5/27.
+ * 这是获得登陆和注册信息的P层
  */
 
 public class LogPresent {

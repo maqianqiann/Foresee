@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<include
+    layout="@layout/include_layout"/>
+    <ImageView
+        android:layout_width="@dimen/x177"
+        android:layout_height="@dimen/y160"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/x100"
+        android:id="@+id/login_me2_im"
+        android:src="@mipmap/account_clerkhead_default"
+        />
+    <TextView
+        android:id="@+id/login_me2_text"
+        android:layout_width="@dimen/x200"
+        android:layout_height="@dimen/x50"
+        android:text="请先登录"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/x30"
+        android:textSize="@dimen/x24"
+        android:background="#9ce16e"
+        android:gravity="center"
+        android:textColor="#fff"
+
+        />
+
+</LinearLayout>

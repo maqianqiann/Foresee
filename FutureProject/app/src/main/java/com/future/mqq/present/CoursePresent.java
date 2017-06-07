@@ -11,6 +11,7 @@ import com.future.mqq.view.CourseView;
 
 /**
  * Created by lenovo on 2017/5/26.
+ * 这是获取课程订单信息
  */
 
 public class CoursePresent {
@@ -38,6 +39,7 @@ public class CoursePresent {
          },context,object_id);
     }
 
+    //这是获得
     public void getTopDa(){
         model.getOnTopDatas(new CourseModel.OnTopLiener() {
             @Override
@@ -47,6 +49,7 @@ public class CoursePresent {
         },context,object_id);
     }
 
+    //这是第一次交互时需要获得的数据
     public void getOrderDatas(){
         model.getOrderDatas(new CourseModel.OnOrderListener() {
             @Override

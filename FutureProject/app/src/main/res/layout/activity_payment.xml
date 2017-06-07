@@ -112,14 +112,15 @@
                     android:textSize="16dp" />
             </LinearLayout>
 
-            <ImageView
+            <CheckBox
+                android:button="@null"
                 android:id="@+id/remainderImg"
                 android:layout_width="26.7dp"
                 android:layout_height="26.7dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"
-                android:src="@drawable/checkbox_selector" />
+                android:background="@drawable/checkbox_selector" />
         </RelativeLayout>
     </RelativeLayout>
 
@@ -166,8 +167,8 @@
 
             <ImageView
                 android:id="@+id/iv3"
-                android:layout_width="29.3dp"
-                android:layout_height="29.3dp"
+                android:layout_width="@dimen/x70"
+                android:layout_height="@dimen/x70"
                 android:src="@drawable/balance_wechat" />
 
             <TextView
@@ -180,14 +181,15 @@
                 android:textColor="#323232"
                 android:textSize="21.3dp" />
 
-            <ImageView
+            <CheckBox
+                android:button="@null"
                 android:id="@+id/weChatImg"
                 android:layout_width="26.7dp"
                 android:layout_height="26.7dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"
-                android:src="@drawable/checkbox_selector" />
+                android:background="@drawable/checkbox_selector" />
         </RelativeLayout>
     </RelativeLayout>
 
@@ -206,8 +208,8 @@
 
             <ImageView
                 android:id="@+id/iv5"
-                android:layout_width="29.3dp"
-                android:layout_height="29.3dp"
+                android:layout_width="@dimen/x70"
+                android:layout_height="@dimen/x70"
                 android:src="@drawable/balance_alipay" />
 
             <TextView
@@ -220,14 +222,15 @@
                 android:textColor="#323232"
                 android:textSize="21.3dp" />
 
-            <ImageView
+            <CheckBox
+                android:button="@null"
                 android:id="@+id/alipayImg"
                 android:layout_width="26.7dp"
                 android:layout_height="26.7dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"
-                android:src="@drawable/checkbox_selector" />
+                android:background="@drawable/checkbox_selector" />
         </RelativeLayout>
     </RelativeLayout>
 

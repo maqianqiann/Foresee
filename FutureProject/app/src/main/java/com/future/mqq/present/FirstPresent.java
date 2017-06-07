@@ -8,6 +8,7 @@ import com.future.mqq.view.FirstView;
 
 /**
  * Created by lenovo on 2017/5/31.
+ * 这是第一次握手时使用的
  */
 
 public class FirstPresent {

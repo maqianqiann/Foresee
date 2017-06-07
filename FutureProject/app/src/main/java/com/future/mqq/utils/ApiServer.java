@@ -110,7 +110,7 @@ public interface ApiServer {
 
                                  );
 
-    //第一注册的时候与后台进行交互
+    //第一注册的时候与后台进行交互，这是乐学的订单信息
     @POST(UrlConnect.REGIST)
     @FormUrlEncoded
     Flowable<SessionBean> getRegist(@Field("app_id") String appId, @Field("dev_id")String dev_id,

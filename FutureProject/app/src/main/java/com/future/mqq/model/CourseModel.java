@@ -12,6 +12,7 @@ import com.future.mqq.bean.OrderBean;
 
 public interface CourseModel {
 
+    //我的课程的信息
     void getOnCourse(OnCourseLienter onCourseLienter, Context context,String object_id);
       interface OnCourseLienter{
           void getListtry(MyCourseBean bean);
@@ -19,11 +20,13 @@ public interface CourseModel {
 
       }
 
+    //这是精选
     void getOnTopDatas(OnTopLiener topLiener, Context context,String object_id);
     interface  OnTopLiener{
         void getTop(JingBean jingBean);
     }
 
+    //这是订单的信息
     void getOrderDatas(OnOrderListener onOrderListener);
     interface  OnOrderListener{
         void getOrderSn(OrderBean orderBean);
