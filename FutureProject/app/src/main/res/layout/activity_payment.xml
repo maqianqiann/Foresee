@@ -12,7 +12,7 @@
     <TextView
         android:id="@+id/paymentTitleBar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:background="#ffffff"
         android:gravity="center"
          android:text="结算"
@@ -22,7 +22,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="133.3dp"
+        android:layout_height="120.3dp"
         android:layout_marginTop="1dp"
         android:background="#fff">
 
@@ -43,7 +43,7 @@
             android:layout_below="@id/text_"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:text="￥6.00"
+            android:text="￥0.01"
             android:textColor="#e94b41"
             android:textSize="48dp" />
     </RelativeLayout>
@@ -155,7 +155,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="73.3dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:background="#fff">
 
         <RelativeLayout
@@ -163,7 +163,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="@dimen/activity_vertical_margin">
+            android:layout_marginTop="1dp">
 
             <ImageView
                 android:id="@+id/iv3"
@@ -239,7 +239,7 @@
         android:layout_width="466.7dp"
         android:layout_height="53.3dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="73.3dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/paybtn_selector"
         android:text="确认支付"
         android:textColor="#fff"

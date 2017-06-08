@@ -35,4 +35,10 @@ public class UrlConnect {
 
     public static final String LOG ="/app/v1/user_pwd_login" ;
     public static final String AB ="ab" ;
+
+
+    //这是业务服务器的地址
+       public static final String LOCAL_URL ="http://169.254.94.62:8080";
+
+    public static final String LOCAL_URL_POST ="/PayServer/AlipayDemo";
 }

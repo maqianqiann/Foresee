@@ -146,6 +146,11 @@ public interface ApiServer {
                                   );
 
 
+    //这是本地服务器的支付加签
+    @POST(UrlConnect.LOCAL_URL_POST)
+    @FormUrlEncoded
+    Flowable<String> getService(@Field("subject") String subject,@Field("body") String body,@Field("total_fee") String total_fee);
+
 
 
 }
