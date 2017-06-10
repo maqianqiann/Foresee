@@ -16,8 +16,10 @@ import com.future.mqq.bean.SessionBean;
 import io.reactivex.Flowable;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 /**
  * Created by lenovo on 2017/5/23.
@@ -150,7 +152,8 @@ public interface ApiServer {
     @POST(UrlConnect.LOCAL_URL_POST)
     @FormUrlEncoded
     Flowable<String> getService(@Field("subject") String subject,@Field("body") String body,@Field("total_fee") String total_fee);
-
+   @GET("PayServer/AlipayDemo")
+   Flowable<String>  getPay(@Query("subject") String subject,@Query("body")String body,@Query("total_fee") String total_fee );
 
 
 }

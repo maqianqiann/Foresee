@@ -54,4 +54,6 @@ dependencies {
     compile 'com.loopj.android:android-async-http:1.4.9'
     testCompile 'junit:junit:4.12'
     compile files('libs/alipaySdk-20160516.jar')
+    compile files('libs/SocialSDK_WeiXin_1.jar')
+    compile 'com.loopj.android:android-async-http:1.4.9'
 }

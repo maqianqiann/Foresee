@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    <TextView
+
+        style="@style/TitleText"
+        android:text="通过微信支付"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBule"
+
+        />
+    
+    <Button
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:id="@+id/appay_btn"
+         android:layout_width="match_parent"
+        android:layout_height="40dp"
+	    android:layout_margin="10dp"
+        android:text="@string/pay_by_wxap"/>
+    <Button
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:id="@+id/check_pay_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+	    android:layout_margin="10dp"
+        android:text="@string/check_pay"/>
+
+</LinearLayout>
