@@ -41,12 +41,14 @@ public class LogActivity extends AppCompatActivity implements View.OnClickListen
     private RelativeLayout qq;
     private String uname;
     private String pwd;
+    private int log_num;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        Intent intent = getIntent();
+        log_num = intent.getIntExtra("log_num", -1);
         initView();
     }
 
@@ -105,11 +107,20 @@ public class LogActivity extends AppCompatActivity implements View.OnClickListen
         // TODO validate success, do something
         //登陆成功之后，进行记录登陆的状态
         log=true;
+
         //并且跳转到我的界面
-        Intent in=new Intent(LogActivity.this,MainActivity.class);
-        in.putExtra("num",3);
-        startActivity(in);
-        finish();
+        if(log_num==0){
+            Intent in=new Intent(LogActivity.this,MainActivity.class);
+            in.putExtra("num",3);
+            startActivity(in);
+            finish();
+        }else if(log_num==1){
+            Intent in=new Intent();
+            this.setResult(200,in);
+            finish();
+        }
+
+
 
     }
 

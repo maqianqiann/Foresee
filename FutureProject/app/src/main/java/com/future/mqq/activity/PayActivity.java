@@ -12,7 +12,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -95,15 +94,20 @@ public class PayActivity extends Activity implements View.OnClickListener {
         alipayImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                flag_zf=true;
+
                 flag_wx=false;
+                flag_zf=!flag_zf;
+                alipayImg.setSelected(true);
+                weChatImg.setSelected(false);
             }
         });
-        weChatImg.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        weChatImg.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                flag_wx=true;
+            public void onClick(View v) {
                 flag_zf=false;
+                flag_wx=!flag_wx;
+                alipayImg.setSelected(false);
+                weChatImg.setSelected(true);
             }
         });
 
@@ -120,11 +124,12 @@ public class PayActivity extends Activity implements View.OnClickListener {
                 //判断选择支付的方式，如果是微信就调起微信的API，
                 //点击之后如果是支付宝就调取支付宝的API  PayTask
                 if(flag_wx){
+
                     //代表点击了微信，调起PayReq
                     Intent in=new Intent(PayActivity.this, PayActivity1.class);
                     startActivity(in);
                 }
-                if(flag_zf){
+               else if(flag_zf){
                   //调取支付宝的API  PayTask
                     PayZFB();//客户端的加密
                  // ZFB();// 服务端的加密

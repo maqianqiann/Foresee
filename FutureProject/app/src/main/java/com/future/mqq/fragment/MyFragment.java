@@ -57,13 +57,13 @@ public class MyFragment extends Fragment {
 
         }else {
             view = inflater.inflate(R.layout.m_main,null);
+            TextView m_name= (TextView) view.findViewById(R.id.m_name);
+            m_name.setText("已登录");
             TextView title= (TextView) view.findViewById(R.id.text_title_include);
             title.setText("我的");
             //进行判断的登陆的状态
             activity = (MainActivity) getActivity();
         }
-
-
         return view;
     }
 

@@ -73,19 +73,20 @@ android:layout_weight="1"
 
         android:layout_below="@id/linear_more"
         >
+
         <ImageView
             android:layout_marginTop="15dp"
             android:id="@+id/im_more"
             android:src="@drawable/course_teachers"
-            android:layout_width="105dp"
-            android:layout_height="105dp"
-            android:layout_marginLeft="5dp"
+            android:layout_width="@dimen/x105"
+            android:layout_height="@dimen/x105"
+            android:layout_marginLeft="15dp"
             />
         <ImageView
 
             android:id="@+id/im_person"
-            android:layout_marginTop="80dp"
-            android:layout_marginLeft="75dp"
+            android:layout_marginTop="@dimen/x100"
+            android:layout_marginLeft="@dimen/x100"
             android:src="@drawable/home_wenben"
             android:layout_width="40px"
             android:layout_height="40px" />
@@ -94,7 +95,7 @@ android:layout_weight="1"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="于春华老师"
-              android:layout_marginLeft="210px"
+              android:layout_marginLeft="@dimen/x170"
               android:id="@+id/name_more"
               android:layout_marginTop="20dp"
               android:textSize="16.3sp"
@@ -106,28 +107,32 @@ android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="于春华老师"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="210px"
+            android:layout_marginLeft="@dimen/x170"
             android:layout_below="@id/name_more"
             android:id="@+id/course_more"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="@dimen/x130"
             android:textColor="#898989"
             android:textSize="13.3sp"
 
 
             />
+
         <TextView
-            android:layout_width="120dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="320dp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x80"
             android:background="@drawable/return_course_btn"
-            android:layout_marginTop="50dp"
             android:text="听老师介绍"
             android:textColor="#ffffff"
             android:textSize="16sp"
             android:paddingTop="5dp"
-            android:paddingLeft="10dp"
+            android:paddingLeft="5dp"
 
 
+            android:layout_alignTop="@+id/course_more"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/textView2"
+            android:layout_marginRight="10dp"
             />
 
 

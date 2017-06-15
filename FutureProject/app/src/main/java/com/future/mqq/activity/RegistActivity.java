@@ -1,9 +1,9 @@
 package com.future.mqq.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -22,7 +22,7 @@ import com.future.mqq.view.LogView;
 /**
  * Created by lenovo on 2017/5/27.
  */
-public class RegistActivity extends AppCompatActivity implements View.OnClickListener ,LogView{
+public class RegistActivity extends Activity implements View.OnClickListener ,LogView{
     private EditText regist_phone;
     private EditText regist_num;
     private TextView regist_getnum;
@@ -52,14 +52,25 @@ public class RegistActivity extends AppCompatActivity implements View.OnClickLis
         regist_getnum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 //进行注册，获得seesion
                 String phone = regist_phone.getText().toString().trim();
+
+                int length = phone.length();
+                Log.i("length",length+"");
                 if (TextUtils.isEmpty(phone)) {
-                    Toast.makeText(RegistActivity.this, "+86,必须是11位手机号", Toast.LENGTH_SHORT).show();
-                    return;
+                    Toast.makeText(RegistActivity.this, "请输入注册的手机号", Toast.LENGTH_SHORT).show();
+
                 }
-                Toast.makeText(RegistActivity.this, "sasas", Toast.LENGTH_SHORT).show();
-                present.getRegist(phone);
+                if (phone.length()<11){
+                    Toast.makeText(RegistActivity.this, "+86,必须是11位手机号", Toast.LENGTH_SHORT).show();
+
+                }
+                 else {
+                    regist_num.setText("9998");
+                    present.getRegist(phone);
+                }
+
             }
         });
     }
@@ -70,12 +81,8 @@ public class RegistActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.regist_btn:
                 //点击注册的时候进行判断
                 submit();
-
-
                 break;
             case R.id.regist_num:
-
-
 
                 break;
         }
@@ -86,36 +93,33 @@ public class RegistActivity extends AppCompatActivity implements View.OnClickLis
         String num = regist_num.getText().toString().trim();
         if (TextUtils.isEmpty(num)) {
             Toast.makeText(this, "输入你收到的验证码", Toast.LENGTH_SHORT).show();
-            return;
+
         }
 
         String password = regist_password.getText().toString().trim();
-        if (TextUtils.isEmpty(password)) {
 
+        if (TextUtils.isEmpty(password)||password.length()<6) {
             Toast.makeText(this, "密码不少于6个字", Toast.LENGTH_SHORT).show();
-            return;
+
         }
-
-        // TODO validate success, do something
-
-        //进行请求
-      //  present.
 
       /*  //注册成功跳转到登陆的界面
         Intent intent = new Intent(RegistActivity.this, LogActivity.class);
         startActivity(intent);
         finish();*/
 
-        if(reg_session!=null){
-            String pwd = regist_password.getText().toString().trim();
-            //将数据回传给登陆界面
-            Intent intent=new Intent();
-            intent.putExtra("uname",regist_phone.getText().toString().trim());
-            intent.putExtra("pwd",pwd);
-            RegistActivity.this.setResult(20,intent);
-            finish();
-            //进行第二次交互，校对验证码
-            present.getRegistData(reg_session,9998,pwd);
+       else{
+            if(reg_session!=null){
+                String pwd = regist_password.getText().toString().trim();
+                //将数据回传给登陆界面
+                Intent intent=new Intent();
+                intent.putExtra("uname",regist_phone.getText().toString().trim());
+                intent.putExtra("pwd",pwd);
+                RegistActivity.this.setResult(20,intent);
+                finish();
+                //进行第二次交互，校对验证码
+                present.getRegistData(reg_session,9998,pwd);
+            }
         }
 
 

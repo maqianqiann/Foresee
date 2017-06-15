@@ -1,9 +1,9 @@
 package com.future.mqq.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -24,7 +24,7 @@ import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
  * Created by lenovo on 2017/5/26.
  * 这是课程详情的界面，有视频的播放，点击时进行购买
  */
-public class MoreActivity extends AppCompatActivity implements CourseView{
+public class MoreActivity extends Activity implements CourseView{
 
     private LinearLayout linear_more;
     private JCVideoPlayerStandard jc_more;
@@ -73,7 +73,9 @@ public class MoreActivity extends AppCompatActivity implements CourseView{
                 if(!LogActivity.log){
                     //进行注册
                     Intent in=new Intent(MoreActivity.this,LogActivity.class);
-                    startActivity(in);
+                    in.putExtra("log_num",1);
+                    startActivityForResult(in,100);
+
                     return;
                 }else {
                     present.getOrderDatas();//获取支付订单的信息
@@ -123,5 +125,16 @@ public class MoreActivity extends AppCompatActivity implements CourseView{
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(data!=null){
+            if(requestCode==100&&resultCode==200){
 
+
+            }
+        }
+
+
+    }
 }

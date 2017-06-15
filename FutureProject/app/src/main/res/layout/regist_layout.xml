@@ -51,6 +51,7 @@
                 android:layout_marginLeft="20dp"
                 android:background="@null"
                 android:hint="+86"
+                android:digits="0123456789"
                 android:inputType="phone"
                 android:maxLines="1"
                 android:textSize="15sp"/>

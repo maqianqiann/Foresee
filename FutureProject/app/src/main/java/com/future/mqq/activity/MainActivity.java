@@ -68,11 +68,14 @@ public class MainActivity extends AppCompatActivity implements FirstView{
             present.getModelDatas();
         }
         else{
-          showFragment();
+            Intent intent = getIntent();
+            num = intent.getIntExtra("num",0);
+
+
+            showFragment();
         }
 
-        Intent intent = getIntent();
-        num = intent.getIntExtra("num",0);
+
         //设置点击事件
         //将fragment放入activity中
 
@@ -146,6 +149,7 @@ public class MainActivity extends AppCompatActivity implements FirstView{
                     //如果登陆的状态是false
                     //跳转到登陆的界面
                     Intent in=new Intent(MainActivity.this,LogActivity.class);
+                    in.putExtra("log_num",0);
                     startActivity(in);
 
                 }
